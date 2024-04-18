@@ -1,0 +1,136 @@
+$primary--color: rgb(52 52 52);
+$secondary--color: rgb(152 129 123);
+$tertiary--color: rgb(242 243 244);
+$quaternary--color: rgb(255 36 0);
+$quinary--color: rgb(233 116 81);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-right: linear-gradient(90deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-bottom: linear-gradient(180deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-left: linear-gradient(270deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-top-right: linear-gradient(45deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-bottom-right: linear-gradient(135deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-top-left: linear-gradient(225deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-bottom-left: linear-gradient(315deg, #343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+$gradient-radial: radial-gradient(#343434ff, #98817bff, #f2f3f4ff, #ff2400ff, #e97451ff);
+
+@font-face {
+    font-family: 'Migra-Regular';
+    src: url('fonts/Portfolio-fonts/Migra-Reg/Migra-Extrabold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family:'Migra-Regular', sans-serif;
+
+    .navbar {
+        background-color: $primary--color;
+        background:transparent;
+        backdrop-filter: blur(10px);
+        color: $tertiary--color;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top:0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    
+
+        .h5 {
+            font-size: 30px;
+            text-decoration: none;
+            text-decoration-color: $tertiary--color;
+        }
+
+        h4 {
+            font-size: 20px;
+            text-decoration: none;
+            text-decoration-color: $quinary--color;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            width: 50%;
+        
+            .list-item {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px;
+                margin: 15px;
+                width: 50%;
+            }
+
+            li a::after {
+                content: '';
+                display: absolute;
+                top:55%;
+                width: 100%;
+                height: 2px;
+                background: $quinary--color;
+                transform: translate(-101%, -50%);
+                transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+        }
+    }
+}
+
+header {
+    background-image: url('images/background-body9.jpg');
+    background-position: center;
+    height: 100vh;
+}
+
+.portfolio-section {
+    height:100vh;
+
+    &.about,
+    &.projekt {
+        background-color: $primary--color;
+    }
+
+    &.contact {
+        background-image: url(./images/backgroundmain.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.slogan {
+    font-size: 70px;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top:40%;
+    left:200px;
+}
+
+.gradient-text {
+    color:transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #343434ff, rgb(206, 206, 206), rgb(255 36 0));
+    -webkit-background-clip: text; 
+}
+
+.linear-text {
+    color:transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #343434ff, rgb(233 116 81));
+    -webkit-background-clip: text; 
+}

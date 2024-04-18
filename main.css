@@ -1,0 +1,112 @@
+/* SCSS Gradient */
+@font-face {
+  font-family: "Migra-Regular";
+  src: url("fonts/Portfolio-fonts/Migra-Reg/Migra-Extrabold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Migra-Regular", sans-serif;
+}
+body .navbar {
+  background-color: rgb(52, 52, 52);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  color: rgb(242, 243, 244);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+body .navbar .h5 {
+  font-size: 30px;
+  text-decoration: none;
+  text-decoration-color: rgb(242, 243, 244);
+}
+body .navbar h4 {
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration-color: rgb(233, 116, 81);
+}
+body .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 50%;
+}
+body .navbar ul .list-item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 15px;
+  width: 50%;
+}
+body .navbar ul li a::after {
+  content: "";
+  display: absolute;
+  top: 55%;
+  width: 100%;
+  height: 2px;
+  background: rgb(233, 116, 81);
+  transform: translate(-101%, -50%);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+header {
+  background-image: url("images/background-body9.jpg");
+  background-position: center;
+  height: 100vh;
+}
+
+.portfolio-section {
+  height: 100vh;
+}
+.portfolio-section.about, .portfolio-section.projekt {
+  background-color: rgb(52, 52, 52);
+}
+.portfolio-section.contact {
+  background-image: url(./images/backgroundmain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slogan {
+  font-size: 70px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 40%;
+  left: 200px;
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #343434, rgb(206, 206, 206), rgb(255, 36, 0));
+  -webkit-background-clip: text;
+}
+
+.linear-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #343434, rgb(233, 116, 81));
+  -webkit-background-clip: text;
+}
+
+/*# sourceMappingURL=main.css.map */
