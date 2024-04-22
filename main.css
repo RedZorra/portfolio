@@ -1,111 +1,4 @@
 /* SCSS Gradient */
-@font-face {
-  font-family: "Migra-Regular";
-  src: url("fonts/Portfolio-fonts/Migra-Reg/Migra-Extrabold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Migra-Regular", sans-serif;
-}
-body .navbar {
-  background-color: rgb(52, 52, 52);
-  background: transparent;
-  backdrop-filter: blur(10px);
-  color: rgb(242, 243, 244);
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-body .navbar .h5 {
-  font-size: 30px;
-  text-decoration: none;
-  text-decoration-color: rgb(242, 243, 244);
-}
-body .navbar h4 {
-  font-size: 20px;
-  text-decoration: none;
-  text-decoration-color: rgb(233, 116, 81);
-}
-body .navbar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  width: 50%;
-}
-body .navbar ul .list-item {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  margin: 15px;
-  width: 50%;
-}
-body .navbar ul .list-a-head {
-  color: rgb(242, 243, 244);
-  text-decoration: none;
-  text-decoration-color: rgb(242, 243, 244);
-  font-size: 50px;
-  padding-right: 45px;
-}
-
-header {
-  background-image: url("images/background-body9.jpg");
-  background-position: center;
-  height: 100vh;
-}
-
-.portfolio-section {
-  height: 100vh;
-}
-.portfolio-section.about, .portfolio-section.projekt {
-  background-color: rgb(52, 52, 52);
-}
-.portfolio-section.contact {
-  background-image: url(./images/backgroundmain.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.slogan {
-  font-size: 70px;
-  background: transparent;
-  backdrop-filter: blur(10px);
-  position: absolute;
-  top: 40%;
-  left: 200px;
-}
-
-.gradient-text {
-  color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(90deg, #343434, rgb(206, 206, 206), rgb(255, 36, 0));
-  -webkit-background-clip: text;
-}
-
-.linear-text {
-  color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(90deg, #343434, rgb(233, 116, 81));
-  -webkit-background-clip: text;
-}
-
 .portfolio-section.about .about-line {
   width: 100px;
   height: 10px;
@@ -222,15 +115,13 @@ header {
     opacity: 1;
   }
 }
-.button {
-  position: relative;
-  display: inline-block;
-  margin-top: 300px;
-}
-
-.projekt-btn {
+.projekt-btn-wrapper {
   position: absolute;
-  top: 200px;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-right: 22px;
 }
 
 .projekt-btn1,
@@ -346,29 +237,6 @@ footer .footer-text {
   padding-top: 15px;
 }
 
-.footer-btn {
-  margin: 12px;
-  height: 50px;
-  width: 120px;
-  border-radius: 10px;
-  background: #333;
-  justify-content: center;
-  align-items: center;
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
-  font-family: "Migra-Regular", sans-serif;
-  cursor: pointer;
-  border: none;
-  font-size: 16px;
-  color: rgb(161, 161, 161);
-  transition: 500ms;
-}
-
-.footer-btn:hover {
-  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
-  color: #d6d6d6;
-  transition: 500ms;
-}
-
 .footer-links {
   display: flex;
   justify-content: space-between;
@@ -382,7 +250,7 @@ footer .footer-text {
 }
 
 .foo-a {
-  font-size: 60px;
+  font-size: 30px;
   padding-right: 32px;
   color: transparent;
   background-clip: text;
@@ -390,6 +258,114 @@ footer .footer-text {
   -webkit-background-clip: text;
   position: relative;
   left: 30px;
+}
+
+@font-face {
+  font-family: "Migra-Regular";
+  src: url("fonts/Portfolio-fonts/Migra-Reg/Migra-Extrabold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Migra-Regular", sans-serif;
+  overflow-x: hidden;
+}
+body .navbar {
+  background-color: rgb(52, 52, 52);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  color: rgb(242, 243, 244);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+body .navbar .h5 {
+  font-size: 30px;
+  text-decoration: none;
+  text-decoration-color: rgb(242, 243, 244);
+}
+body .navbar h4 {
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration-color: rgb(233, 116, 81);
+}
+body .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 50%;
+}
+body .navbar ul .list-item {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 15px;
+  width: 50%;
+}
+body .navbar ul .list-a-head {
+  color: rgb(242, 243, 244);
+  text-decoration: none;
+  text-decoration-color: rgb(242, 243, 244);
+  font-size: 50px;
+  padding-right: 45px;
+}
+
+header {
+  background-image: url("images/background-body9.jpg");
+  background-position: center;
+  height: 100vh;
+}
+
+.portfolio-section {
+  height: 100vh;
+}
+.portfolio-section.about, .portfolio-section.projekt {
+  background-color: rgb(52, 52, 52);
+}
+.portfolio-section.contact {
+  background-image: url(./images/backgroundmain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slogan {
+  font-size: 70px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 40%;
+  left: 200px;
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #343434, rgb(206, 206, 206), rgb(255, 36, 0));
+  -webkit-background-clip: text;
+}
+
+.linear-text {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #343434, rgb(233, 116, 81));
+  -webkit-background-clip: text;
 }
 
 /*# sourceMappingURL=main.css.map */

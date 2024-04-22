@@ -1,0 +1,165 @@
+.projekt-btn-wrapper {
+    position: absolute;
+    bottom: 30px;
+    display:flex;
+    justify-content: center;
+    width:100%;
+    margin-right:22px;
+}
+
+.projekt-btn1,
+.projekt-btn2 {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1.5em 3em;
+    color: var(--glow-color);
+    font-family:'Migra-Regular', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.projekt-btn1::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 200px;
+    left: 120%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+   
+.projekt-btn1:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em $quinary--color,
+           0 0 4em 2em $quinary--color,
+           inset 0 0 .75em .25em $quinary--color;
+}
+   
+.projekt-btn1:active {
+    box-shadow: 0 0 0.6em .25em $quinary--color,
+        0 0 2.5em 2em $quinary--color,
+        inset 0 0 .5em .25em $quinary--color;
+}
+
+.projekt-btn2::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 120%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+   
+.projekt-btn2:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em $quinary--color,
+           0 0 4em 2em $quinary--color,
+           inset 0 0 .75em .25em $quinary--color;
+}
+   
+.projekt-btn2:active {
+    box-shadow: 0 0 0.6em .25em $quinary--color,
+        0 0 2.5em 2em $quinary--color,
+        inset 0 0 .5em .25em $quinary--color;
+}
+
+.contact-line {
+    color: $tertiary--color;
+    position:absolute;
+    right:80px;
+}
+
+.contact-text {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #343434ff, rgb(206, 206, 206), rgb(255 36 0));
+    -webkit-background-clip: text; 
+    position: absolute;
+    padding-top: 180px;
+    font-size: 100px;
+
+}
+
+.contact-list {
+    color: $tertiary--color;
+    position: absolute;
+    right:80px;
+    
+    .list-border {
+        border: 3px solid $quinary--color;
+        padding: 10px;
+        margin: 10px;
+        width: 70%;
+        border-radius: 60%;
+        margin-top:80px;
+    }
+}
+
+footer {
+    background-color: $secondary--color;
+    height: 160px;
+
+    .footer-text {
+        font-size:50px;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(90deg, #343434ff, rgb(206, 206, 206), rgb(255 36 0));
+        -webkit-background-clip: text; 
+        position: absolute;
+        padding-top:15px;
+    }
+}
+
+
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    border-radius: 60%;
+    padding-top:100px ;
+    padding-left:250px;
+    
+}
+
+.foo-a {
+    font-size: 30px;
+    padding-right: 32px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #343434ff, rgb(206, 206, 206), rgb(255 36 0));
+    -webkit-background-clip: text; 
+    position: relative;
+    left:30px;
+}
+
+
+  
+
+
